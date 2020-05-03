@@ -1,0 +1,200 @@
+{
+	"info": {
+		"_postman_id": "f8e0cd13-73d1-4020-8d30-32c9038907ff",
+		"name": "udemy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://swapi.dev/api/people/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b461dc6-f77f-4fb2-af17-f3e30a02711c",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"",
+							"var schema = {",
+							"    //specify the type of object",
+							"    \"type\":\"object\",",
+							"    //specify requires properties",
+							"    \"required\": [\"name\",\"homeworld\",\"films\",\"species\",\"vehicles\",\"starships\"],",
+							"    //describe the properties",
+							"    \"properties\": {",
+							"        \"name\": {\"type\":\"string\"},",
+							"        \"homeworld\":{\"type\":\"string\"},",
+							"        \"films\":{\"type\":\"array\",",
+							"        \"items\":{\"type\":\"string\"}",
+							"            ",
+							"        },",
+							"        \"vehicles\":{\"type\":\"string\"},",
+							"        \"starships\":{\"type\":\"string\"},",
+							"        \"species\":{\"type\":\"array\",",
+							"            \"items\":{\"type\":\"string\"}",
+							"        },",
+							"         \"vehicles\":{\"type\":\"array\",",
+							"            \"items\":{\"type\":\"string\"}",
+							"         },",
+							"           \"starships\":{\"type\":\"array\",",
+							"            \"items\":{\"type\":\"string\"}",
+							"         },",
+							"         ",
+							"    }",
+							"",
+							"    ",
+							"};",
+							"",
+							"",
+							"pm.test('Body is correct', function() {",
+							"    pm.expect(tv4.validate(data,schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people/1",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://swapi.dev/api",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cd1d43c9-1370-49a9-a8b7-33506467754e",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"",
+							"var schema = {",
+							"    //specify the type of object",
+							"    \"type\":\"object\",",
+							"    //specify requires properties",
+							"    \"required\": [\"people\",\"planets\",\"films\",\"species\",\"vehicles\",\"starships\"],",
+							"    //describe the properties",
+							"    \"properties\": {",
+							"        \"people\": {\"type\":\"string\"},",
+							"        \"planets\":{\"type\":\"string\"},",
+							"        \"films\":{\"type\":\"string\"},",
+							"        \"vehicles\":{\"type\":\"string\"},",
+							"        \"starships\":{\"type\":\"string\"},",
+							"        \"species\":{\"type\":\"string\"},",
+							"    }",
+							"",
+							"    ",
+							"};",
+							"",
+							"",
+							"pm.test('Body is correct', function() {",
+							"    pm.expect(tv4.validate(data,schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://swapi.dev/api/people/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b461dc6-f77f-4fb2-af17-f3e30a02711c",
+						"exec": [
+							"var data = JSON.parse(responseBody);",
+							"",
+							"var schema = {",
+							"    //specify the type of object",
+							"    \"type\":\"object\",",
+							"    //specify requires properties",
+							"    \"required\": [\"name\",\"homeworld\",\"films\",\"species\",\"vehicles\",\"starships\"],",
+							"    //describe the properties",
+							"    \"properties\": {",
+							"        \"name\": {\"type\":\"string\"},",
+							"        \"homeworld\":{\"type\":\"string\"},",
+							"        \"films\":{\"type\":\"array\",",
+							"        \"items\":{\"type\":\"string\"}",
+							"            ",
+							"        },",
+							"        \"vehicles\":{\"type\":\"string\"},",
+							"        \"starships\":{\"type\":\"string\"},",
+							"        \"species\":{\"type\":\"array\",",
+							"            \"items\":{\"type\":\"string\"}",
+							"        },",
+							"         \"vehicles\":{\"type\":\"array\",",
+							"            \"items\":{\"type\":\"string\"}",
+							"         },",
+							"           \"starships\":{\"type\":\"array\",",
+							"            \"items\":{\"type\":\"string\"}",
+							"         },",
+							"         ",
+							"    }",
+							"",
+							"    ",
+							"};",
+							"",
+							"",
+							"pm.test('Body is correct', function() {",
+							"    pm.expect(tv4.validate(data,schema)).to.be.true;",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://swapi.dev/api/people/1",
+					"protocol": "https",
+					"host": [
+						"swapi",
+						"dev"
+					],
+					"path": [
+						"api",
+						"people",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
